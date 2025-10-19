@@ -1,0 +1,9 @@
+.img-pix {
+    image-rendering:pixelated;
+}
+
+.img-cen {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

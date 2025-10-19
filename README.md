@@ -4,12 +4,10 @@ I like to think of myself as a polymath, learning something new always feels awe
 Most of the time you’ll find me tinkering with low-level programming: assembly, ABIs, file formats, compression algorithms...
 But I also branch out into other crafts: web dev, sewing, drawing, and music.
 
-Curiosity is the main engine. If it's not rust, I’ll give it a try.  
-
 ## 🍷 Social
 
-- Visit my YT channel and eat some cake: [Tesorito 🌙](https://youtube.com/@pianitas38)
-- Check out my website: [In progress...]
+- Visit my [YT channel](https://youtube.com/@pianitas38) and eat some cake. 🌙
+- Check out my [website](https://alex461538.github.io/Alex461538/). ⭐️
 
 ## ⚡️ Tech stack
 
