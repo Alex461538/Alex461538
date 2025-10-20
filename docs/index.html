@@ -8,11 +8,10 @@
 
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+    <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="_static/global.css" />
-    <link rel="stylesheet" type="text/css" href="_static/img-grid.css" />
-    <link rel="stylesheet" type="text/css" href="_static/pearl-mount.css" />
     <link rel="stylesheet" type="text/css" href="_static/utils.css" />
-    <link rel="stylesheet" type="text/css" href="_static/about.css" />
+</script>
 </head>
 
 <body>
@@ -20,10 +19,10 @@
 
     </main>
     <nav>
-        <button id="home-lnk" onclick="loadPage('home.html')">
+        <button id="home-lnk" onclick="loadPage('home')">
             W
         </button>
-        <button id="2-lnk" class="unfocused">
+        <button id="guides-lnk" onclick="loadPage('guides')" class="unfocused">
             む
         </button>
         <button id="1-lnk" class="unfocused">
@@ -37,7 +36,8 @@
     <script>
         const pages = {
             "home": ["home.html", "home-lnk"],
-            "about": ["about.html", "about-lnk"]
+            "about": ["about.html", "about-lnk"],
+            "guides": ["guides.html", "guides-lnk"]
         }
 
         async function loadPage(name) {
@@ -52,8 +52,7 @@
                 const htmlContent = await response.text();
 
                 document.getElementById("main-card").innerHTML = htmlContent;
-                for (b in pages)
-                {
+                for (b in pages) {
                     document.getElementById(pages[b][1]).classList.add("unfocused")
                 }
                 document.getElementById(btn).classList.remove("unfocused")

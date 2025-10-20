@@ -1,6 +1,16 @@
+
+.title {
+    text-align: center;
+
+    color: #eeff53 !important;
+
+    margin-top: 0px;
+    font-size: 25px;
+}
+
 #i {
     image-rendering: pixelated;
-    width: 128px;
+    height: 154px;
 
     margin-left: calc(50% - 64px);
 

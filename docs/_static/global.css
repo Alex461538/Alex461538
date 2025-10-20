@@ -31,15 +31,19 @@ body {
     align-items: center;
 }
 
+figure {
+    margin: 0px;
+}
+
 #main-card {
     position: relative;
     background-color: #191a21;
-    border: 2px solid #38383d;
+    border: 1px solid #38383d;
     border-radius: 3px;
 
     overflow-x: hidden;
 
-    width: min(510px, calc(100% - 20px));
+    width: min(510px, calc(100% - 30px));
 
     height: 506px;
 
@@ -74,8 +78,7 @@ nav {
         border-top-color: #191a21;
 
         border-style: solid;
-        border-width: 2px;
-        border-top-width: 4px;
+        border-width: 1px;
 
         transform: translateY(-1.5px);
 
@@ -91,7 +94,7 @@ nav {
     }
 
     button.unfocused {
-        background-color: #18181a;
+        background-color: transparent;
         color: #38383d;
 
         border-top-width: 2px;
@@ -104,4 +107,14 @@ nav {
         background-color: #252527;
         color: #636371;
     }
+}
+
+.sub-title {
+    font-size: 20px;
+    color: #eeff53;
+}
+
+#main-card:has(> .card-nopad)
+{
+    padding: 0px;
 }
