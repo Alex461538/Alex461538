@@ -45,12 +45,14 @@ body {
 
     max-width: 510px;
     max-height: 506px;
+
+    padding-top: 15px;
 }
 
 #app {
     position: relative;
 
-    width: 90%;
+    width: calc(100% - 30px);
     max-width: 720px;
 
     margin: auto;
@@ -73,6 +75,7 @@ nav {
 
         border-style: solid;
         border-width: 2px;
+        border-top-width: 4px;
 
         transform: translateY(-1.5px);
 
@@ -90,6 +93,8 @@ nav {
     button.unfocused {
         background-color: #18181a;
         color: #38383d;
+
+        border-top-width: 2px;
 
         border-color: transparent;
         transform: none;

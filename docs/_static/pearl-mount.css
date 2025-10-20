@@ -135,7 +135,7 @@
     max-width: 512px;
     max-height: 128px;
 
-    padding-top: 60px;
+    padding-top: 40px;
 
     left: 50%;
     transform: translateX(-50%) scale(0.8);
@@ -144,15 +144,19 @@
 #pia-title {
     text-align: center;
 
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    animation: pia-title-swing 7s ease-in-out alternate infinite;
+    color: #eeff53;
 
     margin-top: 0px;
 
     text-wrap-mode: nowrap;
 
     font-size: 25px;
+}
+
+#pia-title.raimbow {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    animation: pia-title-swing 7s ease-in-out alternate infinite;
 }

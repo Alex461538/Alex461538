@@ -6,47 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The</title>
 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" type="text/css" href="_static/global.css" />
     <link rel="stylesheet" type="text/css" href="_static/img-grid.css" />
     <link rel="stylesheet" type="text/css" href="_static/pearl-mount.css" />
     <link rel="stylesheet" type="text/css" href="_static/utils.css" />
+    <link rel="stylesheet" type="text/css" href="_static/about.css" />
 </head>
 
 <body>
     <main id="main-card">
-        <header class="pearl-landscape-container">
-            <div class="pearl-landscape">
-                <div class="mount-sky"></div>
-                <div class="mount"></div>
-                <div class="blue-pearl pearl"></div>
-                <div class="red-pearl pearl"></div>
-                <div class="green-pearl pearl"></div>
-            </div>
-        </header>
 
-        <h1 id="pia-title">- Pianitas viaje -</h1>
-
-        <section id="app">
-            <p>El taxi amarillo te deja frente a una montaña imponente. La cima está cubierta de nubes.</p>
-
-            <div id="img-pix-grid-1">
-                <img class="i1 img-pix img-cen" src="_static/img/meat-party-jeep.png" />
-                <img class="i2 img-pix img-cen" src="_static/img/moon-moon-five.png" />
-                <img class="i3 img-pix img-cen" src="_static/img/rotataxi.gif" />
-            </div>
-        </section>
     </main>
     <nav>
-        <button>
+        <button id="home-lnk" onclick="loadPage('home.html')">
             W
         </button>
-        <button class="unfocused">
-            A
+        <button id="2-lnk" class="unfocused">
+            む
         </button>
-        <button class="unfocused">
+        <button id="1-lnk" class="unfocused">
+            を
+        </button>
+        <button id="about-lnk" onclick="loadPage('about')" class="unfocused">
             ?
         </button>
     </nav>
+
+    <script>
+        const pages = {
+            "home": ["home.html", "home-lnk"],
+            "about": ["about.html", "about-lnk"]
+        }
+
+        async function loadPage(name) {
+            path = (pages[name] || ["home.html", ""])[0]
+            btn = (pages[name] || ["", "home-lnk"])[1]
+
+            try {
+                const response = await fetch(path);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const htmlContent = await response.text();
+
+                document.getElementById("main-card").innerHTML = htmlContent;
+                for (b in pages)
+                {
+                    document.getElementById(pages[b][1]).classList.add("unfocused")
+                }
+                document.getElementById(btn).classList.remove("unfocused")
+            } catch (error) {
+                console.error("Error loading HTML:", error);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            loadPage("home")
+        })
+    </script>
 </body>
 
 </html>
