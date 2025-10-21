@@ -8,12 +8,17 @@
     }
 }
 
-li {
+li button {
     color: #c073ff;
     cursor: pointer;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    font-family: "nj";
+    font-size: 15px;
 }
 
-li:hover {
+li button:hover {
     color: #ff8a73;
 }
 
@@ -59,7 +64,7 @@ li:hover {
 #sky {
     --t: 0;
     position: absolute;
-    image-rendering: crisp-edges;
+    image-rendering: pixelated;
     background-image: url("./img/meat-sky-mask.gif");
     min-width: 100%;
     min-height: 48px;

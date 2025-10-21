@@ -2,6 +2,8 @@
     @import url("_static/guides.css");
 </style>
 
+<script src="guides.js" ></script>
+
 <figure id="cover-container">
     <div class="blue-pearl pearl"></div>
     <div class="red-pearl pearl"></div>
@@ -19,9 +21,9 @@
         <p>Cálculo integral y vectorial.</p>
 
         <ul>
-            <li>Fracciones parciales</li>
-            <li>Sustitución trigonométrica</li>
-            <li>Sustitución irracional</li>
+            <li><button onclick="openPDFGuide('part-fract')" >Fracciones parciales</button></li>
+            <li><button onclick="openPDFGuide('trig-sust')" >Sustitución trigonométrica</button></li>
+            <li><button onclick="openPDFGuide('irr-intg')" >Sustitución irracional</button></li>
         </ul>
     </section>
 
@@ -29,11 +31,7 @@
         <p>Series y sucesiones.</p>
 
         <ul>
-            <li>Relaciones de recurrencia</li>
-            <li>Series geométricas</li>
-            <li>Serie P</li>
-            <li>Criterio de comparación</li>
-            <li>Criterio de la integral</li>
+            <li><button onclick="openPDFGuide('geom-sers')" >Series geométricas</button></li>
         </ul>
     </section>
 
@@ -41,11 +39,8 @@
         <p>Arquitectura de computadores.</p>
 
         <ul>
-            <li>Memorias.</li>
-            <li>Caché y políticas.</li>
-            <li>Memoria virtual.</li>
-            <li>Aritmética entera.</li>
-            <li>Assembly.</li>
+            <li><button onclick="openPDFGuide('arch-mem')" >Memorias</button></li>
+            <li><button onclick="openPDFGuide('arch-cache-pols')" >La caché y sus políticas</button></li>
         </ul>
     </section>
 </section>
