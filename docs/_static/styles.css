@@ -51,6 +51,8 @@ figure {
     text-align: center;
     margin-top: 0px;
     font-size: 25px;
+    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .title.blue, .sub-title.blue, .text.blue {
@@ -72,6 +74,8 @@ figure {
 .sub-title {
     text-align: center;
     font-size: 20px;
+    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 #main-card:has(> .card-nopad)
@@ -271,6 +275,8 @@ figure {
     border-left: 1px solid #38383d;
     padding: 5px 10px;
     word-break: keep-all;
+    text-wrap: nowrap;
+    white-space: nowrap;
     align-items: center;
     justify-content: center;
     flex-direction: row;
@@ -299,6 +305,9 @@ figure {
     border-top: none;
     padding: 15px;
     margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 #project-info a.option-btn {
@@ -325,8 +334,25 @@ figure {
     gap: 8px;
 }
 
+#project-info .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    min-height: 50px;
+    max-height: 50px;
+    transition: max-height 400ms ease-in-out;
+}
 
+#project-info .image:has(img.opened) {
+    max-height: 500px;
+}
 
+#project-info .image img {
+    object-fit: contain;
+    max-width: 100%;
+    image-rendering: pixelated;
+}
 
 @property --t {
     syntax: '<number>';

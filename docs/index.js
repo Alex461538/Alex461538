@@ -3,7 +3,52 @@ let project_list_card = undefined
 let project_info_card = undefined
 let project_list = []
 
-function printProjects(select_name = "")
+function imageUrlToBase64(url) {
+  return fetch(url)
+    .then(res => {
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+      return res.blob();
+    })
+    .then(blob => new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onloadend = () => resolve(reader.result);
+      reader.onerror = reject;
+      reader.readAsDataURL(blob);
+    }));
+}
+
+async function setProjectImage(project)
+{
+    let banner_src_data = await imageUrlToBase64(`https://raw.githubusercontent.com/${project.owner.login}/${project.name}/refs/heads/main/banner.png`)
+        .then(blob => blob)
+        .catch(err => {
+            return ""
+        })
+    
+    if (!banner_src_data)
+    {
+        banner_src_data = await imageUrlToBase64(`https://raw.githubusercontent.com/${project.owner.login}/${project.name}/refs/heads/main/guide.png`)
+        .then(blob => blob)
+        .catch(err => {
+            return ""
+        })
+    }
+
+    if (banner_src_data)
+    {
+        document.getElementById("prj-info-img").src = banner_src_data
+    }
+    else
+    {
+        document.getElementById("prj-info-img").src = "_static/img/banner.png"
+    }
+
+    document.getElementById("prj-info-img").classList.add("opened")
+}
+
+async function printProjects(select_name = "")
 {
     if (select_name == "")
     {
@@ -33,21 +78,19 @@ function printProjects(select_name = "")
         return;
     }
 
-    let cache_key = selected_project.updated_at.replaceAll(/[\:\-]/g, "_");
-    let img_url = `https://opengraph.githubassets.com/${cache_key}/${selected_project.owner.login}/${selected_project.name}`;
-    let pages_url = `https://${selected_project.owner.login}.github.io/${selected_project.name}/`
+    let pages_url = `https://${selected_project.owner.login}.github.io/${selected_project.name}/`;
 
-    let k = "<a href=" + pages_url + " class=\"option-btn\" ><img src=\"_static/img/icon/ext.png\" />Website</a>";
-    
-    project_info_card.innerHTML = `
-        ${selected_project.description}
-        </br>
-        </br>
-        <div class="buttons" >
-            <a href="${selected_project.html_url}" class="option-btn" ><img src="_static/img/icon/github.png" />Github</a>
-            ${selected_project.has_pages ? k : ""}
-        </div>
-    `
+    document.getElementById("prj-info-img").classList.remove("opened");
+    document.querySelector("#project-info .descr").innerHTML = selected_project.description;
+    document.querySelector("#project-info .buttons").innerHTML = `
+        <a href="${selected_project.html_url}" class="option-btn" ><img src="_static/img/icon/github.png" />Github</a>
+        ${selected_project.has_pages ? "<a href=" + pages_url + " class=\"option-btn\" ><img src=\"_static/img/icon/ext.png\" />Website</a>" : ""}
+    `;
+
+    setTimeout(() => {
+        document.getElementById("prj-info-img").src = "_static/img/loading.gif";
+        setProjectImage(selected_project)
+    }, 400);
 }
 
 async function getProjects() {
@@ -72,7 +115,7 @@ async function getProjects() {
 
     project_list = project_list.filter(p => p.name != p.owner.login).reverse()
 
-    printProjects( project_list.length > 0 ? project_list[0].name : "" )
+    await printProjects( project_list.length > 0 ? project_list[0].name : "" )
 }
 
 document.addEventListener("DOMContentLoaded", () => {
