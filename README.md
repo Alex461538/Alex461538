@@ -9,7 +9,7 @@ But I also branch out into other crafts: web dev, sewing, drawing, and music.
 - Visit my [YT channel](https://youtube.com/@pianitas38) and eat some cake. 🌙
 - Check out my [website](https://alex461538.github.io/Alex461538/). ⭐️
 
-## ⚡️ Tech stack
+## 🔥 Tech stack
 
 ### Languages & frameworks
 

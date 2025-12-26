@@ -5,34 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The</title>
-
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-    <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="_static/global.css" />
-    <link rel="stylesheet" type="text/css" href="_static/utils.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles.css" />
 </head>
 
 <body>
     <main id="main-card">
-
+        <header class="pearl-landscape-container">
+            <figure class="pearl-landscape">
+                <div class="mount-sky"></div>
+                <div class="mount"></div>
+                <div class="blue-pearl pearl"></div>
+                <div class="red-pearl pearl"></div>
+                <div class="green-pearl pearl"></div>
+            </figure>
+        </header>
+        <section id="app">
+            <h1 id="pia-title" class="raimbow">- Pianitas viaje -</h1>
+            <p>A taxi left you behind the adrading mount, the peak is covered in clouds.</p>
+            <h1 class="title pink">« Play with projects »</h1>
+            <div id="project-list"></div>
+            <div id="project-info"></div>
+            <!-- <h1 class="title mint">« ggg »</h1> -->
+            <h1 class="title blue">« ¿About me? »</h1>
+            <div class="flying-scene">
+                <div id="tower-sky"></div>
+                <video class="center" width="128" height="128" autoplay loop muted>
+                    <source src="_static/vid/flying.webm" type="video/webm" />
+                </video>
+            </div>
+            <p class="text banana">
+                Now, what should I put here? I don't know how to sound impressive, just look at the projects dude.
+            </p>
+        </section>
+        <footer id="social">
+            <img id="profile-photo" src="https://github.com/Alex461538.png" />
+            <div>
+                Visit my <a href="https://youtube.com/@pianitas38" class="text pink">YT channel</a> and eat some cake.
+                Also check out my <a href="https://github.com/Alex461538" class="text blue">github</a>. 🌙 ⭐️
+            </div>
+        </footer>
     </main>
-    <nav>
-        <button id="home-lnk" onclick="loadPage('home')">
-            W
-        </button>
-        <button id="guides-lnk" onclick="loadPage('guides')" class="unfocused">
-            む
-        </button>
-        <button id="1-lnk" class="unfocused">
-            を
-        </button>
-        <button id="about-lnk" onclick="loadPage('about')" class="unfocused">
-            ?
-        </button>
-    </nav>
-
-    <script src="index.js" ></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
