@@ -1,0 +1,28 @@
+#altars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: black;
+    pointer-events: none;
+    user-select: none;
+    border: 1px solid var(--color-main-border);
+    overflow: hidden;
+}
+
+.altar-card {
+    image-rendering: pixelated;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 2em;
+}
+
+.altar-card>img {
+    width: 192px;
+}
+
+@media (max-width: 768px) {
+    #altars {
+        grid-template-columns: 1fr;
+    }
+}

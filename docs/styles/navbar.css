@@ -1,0 +1,24 @@
+#navbar > ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+    gap: 1em;
+}
+
+#navbar > ul > li {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+}
+
+#navbar > ul > li > a {
+    color: var(--color-text-primary);
+    text-wrap-mode: nowrap;
+}
+
+@media (max-width: 768px) {
+    #navbar > ul > li > a {
+        font-size: small;
+    }
+}

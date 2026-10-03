@@ -1,0 +1,41 @@
+#flying-scene {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+#flying-scene-video {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+@property --t {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 1;
+}
+
+@keyframes flying-scene-sky-swing {
+    to {
+        --t: 6.2831;
+    }
+}
+
+#flying-scene-tower-sky {
+    --t: 0;
+    position: absolute;
+    image-rendering: pixelated;
+    background-image: url("/images/skies/colombian.gif");
+    min-width: 100%;
+    min-height: 48px;
+    background-size: contain;
+
+    animation: flying-scene-sky-swing 1s linear infinite;
+
+    transform: translateY(calc(sin(var(--t)) * 10px + 40px)) scale(2) skewY(calc(cos(var(--t)) * 1deg));
+
+    z-index: 8;
+}

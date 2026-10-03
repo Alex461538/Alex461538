@@ -4,54 +4,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The</title>
+    <title>The mount altar.</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="_static/styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="styles/pearl-landscape.css" />
+    <link rel="stylesheet" type="text/css" href="styles/flying-scene.css" />
+    <link rel="stylesheet" type="text/css" href="styles/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="styles/footer.css" />
+
+    <link rel="stylesheet" type="text/css" href="components/project-card.css" />
+    <link rel="stylesheet" type="text/css" href="components/altar-card.css" />
 </head>
 
 <body>
-    <main id="main-card">
-        <header class="pearl-landscape-container">
-            <figure class="pearl-landscape">
-                <div class="mount-sky"></div>
-                <div class="mount"></div>
-                <div class="blue-pearl pearl"></div>
-                <div class="red-pearl pearl"></div>
-                <div class="green-pearl pearl"></div>
-            </figure>
-        </header>
-        <section id="app">
-            <h1 id="pia-title" class="raimbow">- Pianitas viaje -</h1>
-            <p>A taxi left you behind the adrading mount, the peak is covered in clouds.</p>
-            <h1 class="sub-title pink">« Play with projects »</h1>
-            <div id="project-list"></div>
-            <div id="project-info">
-                <div class="image" >
-                    <img id="prj-info-img" src="">
-                </div>
-                <div class="descr" ></div>
-                <div class="buttons" ></div>
-            </div>
-            <!-- <h1 class="title mint">« ggg »</h1> -->
-            <h1 class="sub-title blue">« ¿About me? »</h1>
-            <div class="flying-scene">
-                <div id="tower-sky"></div>
-                <video class="center" width="128" height="128" autoplay loop muted>
-                    <source src="_static/vid/flying.webm" type="video/webm" />
-                </video>
-            </div>
-            <p class="text banana">
-                Now, what should I put here? I don't know how to sound impressive, just look at the projects dude.
-            </p>
+    <header id="header-pearl-landscape-container">
+        <h1 id="header-pearl-landscape-title">⭐️ The mount altar. ⭐️</h1>
+        <figure id="header-pearl-landscape">
+            <div class="header-pearl-landscape-mount-sky"></div>
+            <div class="header-pearl-landscape-mount"></div>
+            <div class="header-pearl-landscape-blue-pearl header-pearl-landscape-pearl"></div>
+            <div class="header-pearl-landscape-red-pearl header-pearl-landscape-pearl"></div>
+            <div class="header-pearl-landscape-green-pearl header-pearl-landscape-pearl"></div>
+        </figure>
+    </header>
+
+    <nav id="navbar">
+        <ul>
+            <li><a href="#WORKSHOP">🧵 /WORKSHOP</a></li>
+            <li><a href="#LABORATORY">🧪 /LABORATORY</a></li>
+            <li><a href="#ALTARS">❤️ /ALTARS</a></li>
+            <li><a href="#ARCHIVE">🗃️ /ARCHIVE</a></li>
+            <li><a href="#footer">⭐️ /ABOUT</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-center">
+        <h3 class="main-title">🐥 /home: "A taxi left you behind the adrading mount, the peak is covered in clouds."</h3>
+        <p>
+            Learning something new always feels awesome.
+            Most of the time you'll find me tinkering with low-level programming: assembly, ABIs, file formats, compression algorithms...
+            But I also branch out into other crafts: web dev, electronics, sewing, drawing, and music. Say hello to the albino polymath picudita!
+        </p>
+        <figure id="flying-scene">
+            <div id="flying-scene-tower-sky"></div>
+            <video id="flying-scene-video" width="128" height="128" autoplay loop muted>
+                <source src="videos/flying.webm" type="video/webm" />
+            </video>
+        </figure>
+        <p class="yellow-text">
+            Now, what should I put here? I don't know how to sound impressive, just look at the projects dude.
+        </p>
+
+        <h3 id="WORKSHOP" class="title">🧵 /WORKSHOP: "Pianitas: mascots sewn in two days that give years of joy, and also age like wine."</h3>
+        
+        <section id="projects"></section>
+
+        <h3 id="LABORATORY" class="title">🧪 /LABORATORY: ""</h3>
+
+        <img width="100" src="/images/perate-wey.png"/>
+        
+        <h3 id="ALTARS" class="title">❤️ /ALTARS: "Admira."</h3>
+
+        <section id="altars">
+            <article class="altar-card">
+                <img src="/images/altars/beku/beku.gif"/>
+            </article>
+            <article class="altar-card">
+                <img src="/images/altars/nraito-cola/cola.gif"/>
+            </article>
         </section>
-        <footer id="social">
-            <img id="profile-photo" src="https://github.com/Alex461538.png" />
-            <div>
-                Visit my <a href="https://youtube.com/@pianitas38" class="text pink">YT channel</a> and eat some cake.
-                Also check out my <a href="https://github.com/Alex461538" class="text blue">github</a>. 🌙 ⭐️
-            </div>
-        </footer>
+
+        Зшоколате тӥаҕ ке микскуҕ карзутлуравам лусар-и у нразто кола-и лзакурне дкадаҕ. Ахастас гохӥр кадаҕ.
+        
+        <h3 id="ARCHIVE" class="title">🗃️ /ARCHIVE: "Adrade: to oxidize electrically a thing."</h3>
+        <section id="archives">
+            <img class="archive-image" src="/images/archive.png"/>
+            <section>
+                Not all things need to be complete or explicit to exist. Find here some algorithms oxidized by time (fonts, LZW, QOI, fourier, games...) and learn some lessons. <a class="blue-text" target="_blank" href="https://github.com/Alex461538/picuda-archive">Picuda archive repository</a>.
+            </section>
+        </section>
     </main>
+    <footer id="footer">
+        <section id="footer-profile">
+            <div id="footer-profile-photo-container">
+                <img class="footer-profile-photo one" src="https://github.com/Alex461538.png" />
+                <img class="footer-profile-photo two" src="/images/me.jpeg" />
+            </div>
+            
+            <section>
+                <h1>Alex Granada 🐥</h1>
+
+                A Web Developer & low-level systems fan.
+                <!-- Visit my <a href="" class="pink-text">YT channel</a> and eat some cake.
+                Also check out my <a href="https://github.com/Alex461538" class="blue-text">github</a>. 🌙 ⭐️ -->
+
+                <section id="footer-buttons">
+                    <!-- <button class="light">Send an email</button>
+                    <button>View CV</button> -->
+                    <a class="net" href="https://youtube.com/@pianitas38" target="_blank">
+                        <img src="/images/icons/Youtube.svg" alt="Youtube icon" />
+                    </a>
+                    <a class="net" href="https://www.reddit.com/u/Picudita" target="_blank">
+                        <img src="/images/icons/Reddit.svg" alt="Reddit icon"/>
+                    </a>
+                    <a class="net" href="https://www.instagram.com/band_mazorca_tierna" target="_blank">
+                        <img src="/images/icons/Instagram.svg" alt="Instagram icon"/>
+                    </a>
+                    <a class="net" href="https://github.com/Alex461538" target="_blank">
+                        <img src="/images/icons/Github.svg" alt="Github icon"/>
+                    </a>
+                </section>
+            </section>
+        </section>
+        
+        <h3>Languages & frameworks</h3>
+
+        <!--
+        I am Alex from the past, if you ever update this, here you can find all badges:
+        https://badges.pages.dev/
+        -->
+
+        <section>
+            <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
+            <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" />
+            <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
+            <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+            <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
+            <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+            <img src="https://img.shields.io/badge/LaTeX-47A141?style=for-the-badge&logo=LaTeX&logoColor=white" />
+            <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" />
+            <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+            <img src="https://img.shields.io/badge/CMake-064F8C?style=for-the-badge&logo=cmake&logoColor=white" />
+            <img src="https://img.shields.io/badge/WebAssembly-654FF0?logo=webassembly&logoColor=fff&style=for-the-badge"/> 
+            <img src="https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+        </section>
+
+        <h3>Tools & platforms</h3>
+
+        <section>
+            <img src="https://img.shields.io/badge/MuseScore-1A70B8?style=for-the-badge&logo=MuseScore&logoColor=white" />
+            <img src="https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" />
+            <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white" />
+            <img src="https://img.shields.io/badge/Inkscape-000000?style=for-the-badge&logo=Inkscape&logoColor=white" />
+            <img src="https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white" />
+            <img src="https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white" />
+            <img src="https://img.shields.io/badge/Godot%20Engine-478CBF?logo=godotengine&logoColor=fff&style=for-the-badge" />
+            <img src="https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=github%20Pages&logoColor=white" />
+            <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
+        </section>
+    </footer>
+
+    <script src="components/project-card.js"></script>
     <script src="index.js"></script>
 </body>
 
