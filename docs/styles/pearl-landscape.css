@@ -47,22 +47,22 @@
 }
 
 .header-pearl-landscape-green-pearl {
-    background-image: url("/images/pearls/green-pearl.png");
+    background-image: url("../images/pearls/green-pearl.png");
     animation-delay: 0s;
 }
 
 .header-pearl-landscape-red-pearl {
-    background-image: url("/images/pearls/red-pearl.png");
+    background-image: url("../images/pearls/red-pearl.png");
     animation-delay: 0.3s;
 }
 
 .header-pearl-landscape-blue-pearl {
-    background-image: url("/images/pearls/blue-pearl.png");
+    background-image: url("../images/pearls/blue-pearl.png");
     animation-delay: 0.6s;
 }
 
 .header-pearl-landscape-mount {
-    background-image: url("/images/mount.png");
+    background-image: url("../images/mount.png");
     image-rendering: pixelated;
     background-repeat: no-repeat;
     background-size: contain;
@@ -75,7 +75,7 @@
 }
 
 .header-pearl-landscape-mount-sky {
-    background-image: url("/images/skies/mount.gif");
+    background-image: url("../images/skies/mount.gif");
     image-rendering: pixelated;
     background-repeat: no-repeat;
     background-size: contain;

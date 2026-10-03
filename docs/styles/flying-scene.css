@@ -28,7 +28,7 @@
     --t: 0;
     position: absolute;
     image-rendering: pixelated;
-    background-image: url("/images/skies/colombian.gif");
+    background-image: url("../images/skies/colombian.gif");
     min-width: 100%;
     min-height: 48px;
     background-size: contain;
