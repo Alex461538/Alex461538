@@ -1,0 +1,288 @@
+
+\documentclass[10pt,a4paper]{article}
+
+% ------------------------------------------------------------
+% Packages
+% ------------------------------------------------------------
+
+\usepackage[margin=1.7cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+
+% ------------------------------------------------------------
+% Configuration
+% ------------------------------------------------------------
+
+\definecolor{accent}{HTML}{3B5B7A}
+\definecolor{textgray}{HTML}{444444}
+\definecolor{lightgray}{HTML}{777777}
+
+\hypersetup{
+	colorlinks=true,
+	urlcolor=accent,
+	linkcolor=accent
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.25em}
+
+\setlist[itemize]{
+	leftmargin=1.3em,
+	itemsep=0.1em,
+	topsep=0.15em
+}
+
+\titleformat{\section}
+{\large\bfseries}
+{}
+{0em}
+{}
+[\titlerule]
+
+\titlespacing{\section}
+{0pt}
+{0.8em}
+{0.4em}
+
+% ------------------------------------------------------------
+% Custom commands
+% ------------------------------------------------------------
+
+\newcommand{\cvname}[1]{
+	{\Huge\bfseries #1}
+}
+
+\newcommand{\cvsubtitle}[1]{
+	{\large\color{lightgray} #1}
+}
+
+\newcommand{\cvcontact}[3]{
+	\small
+	#1 \quad | \quad #2 \quad | \quad #3
+}
+
+\newcommand{\cventry}[4]{
+	\textbf{#1}
+	\hfill
+	{\small\color{lightgray}#2}
+	
+	\textit{#3}
+	
+	#4
+	
+	\vspace{0.35em}
+}
+
+\newcommand{\cvproject}[4]{
+	\vspace{5mm}
+	\textbf{#1}
+	\hfill
+	{\small\color{lightgray}#2}
+	
+	\textit{#3}
+	
+	#4
+	
+	\vspace{0.35em}
+}
+
+% ------------------------------------------------------------
+% Document
+% ------------------------------------------------------------
+
+\begin{document}
+	
+	% ------------------------------------------------------------
+	% Header
+	% ------------------------------------------------------------
+	
+	\begin{center}
+		
+		\cvname{Alex Granada}
+		
+		\vspace{0.25em}
+		
+		\cvsubtitle{Systems Engineering Student \textbar{} Software Developer}
+		
+		\vspace{0.45em}
+		
+		\cvcontact
+		{\href{mailto:pianitas.38@gmail.com}{pianitas.38@gmail.com}}
+		{\href{https://github.com/Alex461538}{github.com/Alex461538}}
+		{\href{https://alex461538.github.io/Alex461538/}{alex461538.github.io/Alex461538}}
+		
+	\end{center}
+	
+	% ------------------------------------------------------------
+	% Profile
+	% ------------------------------------------------------------
+	
+	\section{Profile}
+	
+	Systems Engineering student interested in software development,
+	low-level programming, and understanding how systems work beneath
+	their abstractions. I enjoy building projects independently,
+	learning unfamiliar technologies through experimentation, and
+	combining software with other areas such as electronics,
+	graphics, and physical fabrication.
+	
+	% ------------------------------------------------------------
+	% Education
+	% ------------------------------------------------------------
+	
+	\section{Education}
+	
+	\cventry
+	{Systems Engineering}
+	{2024 -- Present}
+	{Caldas University}
+	{
+		Relevant areas: programming, data structures and algorithms,
+		computer architecture, databases, computer networks,
+		electronics, mathematics, and software development.
+	}
+	
+	% ------------------------------------------------------------
+	% Selected Projects
+	% ------------------------------------------------------------
+	
+	\section{Selected Projects}
+	
+	\cvproject
+	{Chipra FM 500KHz}
+	{2026}
+	{C, WebAssembly, JavaScript, HTML/CSS}
+	{
+		Simulated FM radio encoder/decoder running in the browser.
+		Implemented the signal-processing core in C and compiled it
+		to WebAssembly, with a browser-based interface for
+		experimentation and visualization.
+		
+		\hfill
+		\href{https://alex461538.github.io/chipra-fm/}{Demo}
+		\quad
+		\href{https://github.com/Alex461538/chipra-fm}{Source}
+	}
+	
+	\cvproject
+	{YY-font}
+	{2025}
+	{C++}
+	{
+		Modular font parser and rasterizer implemented primarily
+		as a single-header C++ library. Developed to explore font
+		file formats, binary data, parsing, and low-level graphics.
+		
+		\hfill
+		\href{https://github.com/Alex461538/yyfont}{Source}
+	}
+	
+	\cvproject
+	{Correlones de Canaguay}
+	{2025}
+	{Python}
+	{
+		Small game developed around data structures and algorithms,
+		featuring procedurally created roads and intentionally
+		chaotic vehicle behavior.
+		
+		\hfill
+		\href{https://github.com/Alex461538/correlones-de-canaguay}{Source}
+	}
+	
+	\cvproject
+	{Carechucho}
+	{2025}
+	{Python}
+	{
+		Short experimental game created as a practical exercise
+		in data structures and algorithms.
+		
+		\hfill
+		\href{https://github.com/Alex461538/carechucho}{Source}
+	}
+	
+	\cvproject
+	{Personal Projects \& Fabrication}
+	{Ongoing}
+	{Software, electronics, sewing, 3D design}
+	{
+		Independent projects spanning plush design and fabrication,
+		electronics experiments, interactive web projects, graphics,
+		and other small-scale technical and artistic experiments.
+	}
+	
+	% ------------------------------------------------------------
+	% Technical Skills
+	% ------------------------------------------------------------
+	
+	\section{Technical Skills}
+	
+	\textbf{Programming:}
+	C, C++, Python, JavaScript, TypeScript
+	
+	\textbf{Web:}
+	HTML, CSS, JavaScript, TypeScript, Node.js, React, Angular
+	
+	\textbf{Low-level / Systems:}
+	WebAssembly, assembly, ABIs, binary file formats,
+	parsing, memory management, C/C++ tooling
+	
+	\textbf{Tools:}
+	Git, CMake, LaTeX, GitHub, VS Code
+	
+	\textbf{Other:}
+	Godot, Unity, Blender, Inkscape, MuseScore
+	
+	% ------------------------------------------------------------
+	% Additional Interests
+	% ------------------------------------------------------------
+	
+	\section{Additional Interests}
+	
+	Low-level software, programming language implementation,
+	computer graphics, electronics, embedded systems,
+	digital fabrication, plush design, music, and interactive art.
+	
+	% ------------------------------------------------------------
+	% Languages
+	% ------------------------------------------------------------
+	
+	\section{Languages}
+	
+	\begin{tabularx}{\textwidth}{@{}lX@{}}
+		Spanish & Native \\
+		English & Intermediate (empirical) \\
+	\end{tabularx}
+	
+	% ------------------------------------------------------------
+	% Links
+	% ------------------------------------------------------------
+	
+	\section{Online}
+	
+	\begin{tabularx}{\textwidth}{@{}lX@{}}
+		GitHub &
+		\href{https://github.com/Alex461538}
+		{github.com/Alex461538}
+		\\
+		
+		Personal website &
+		\href{https://alex461538.github.io/Alex461538/}
+		{alex461538.github.io/Alex461538/}
+		\\
+		
+		YouTube &
+		\href{https://youtube.com/@pianitas38}
+		{youtube.com/@pianitas38}
+	\end{tabularx}
+	
+\end{document}
